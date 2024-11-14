@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ns="clr-namespace:MauiAppTest"
+             xmlns:skiaCtrls="clr-namespace:SkiaSharp.Views.Maui.Controls;assembly=SkiaSharp.Views.Maui.Controls"
+             x:Class="MauiAppTest.MainPage"
+             SizeChanged="canvasView_SizeChanged"
+             >
+
+
+    <Grid Padding="25" ColumnSpacing="20" RowSpacing="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <skiaCtrls:SKCanvasView
+            Grid.Row="0" x:Name="canvasView" 
+            PaintSurface="CanvasView_OnPaintSurface"
+            HorizontalOptions="Fill"
+            VerticalOptions="Fill"
+            SizeChanged="canvasView_SizeChanged"
+            Touch="CanvasView_Touch"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="0" x:Name="Iterations_lbl" Text="Iterations: " />
+            <Slider Grid.Column="1" Grid.Row="0" x:Name="Iterations_sld" 
+                    Minimum="1" 
+                    Maximum="300" 
+                    ValueChanged="IterationsChanged"
+                    VerticalOptions="Center"/>
+
+            <Label Grid.Column="0" Grid.Row="1" Text="Depth: " />
+            <Image Grid.Column="1" Grid.Row="1" Source="hue_bar.png"
+                   x:Name="hue_bar_img"
+                   Aspect="AspectFill"
+                   HeightRequest="10"/>
+            <Slider Grid.Column="1" Grid.Row="1" x:Name="Depth1Color_sld"
+                    Minimum="0" 
+                    Maximum="1"
+                    Value="0.5"
+                    Background="Transparent"
+                    MinimumTrackColor="Transparent"
+                    MaximumTrackColor="Transparent"
+                    ValueChanged="Depth1ColorChanged"
+                    VerticalOptions="Center"/>
+
+            <Slider Grid.Column="1" Grid.Row="2"  x:Name="Depth1Factor_sld"
+                    ValueChanged="Depth1FactorChanged"
+                    Minimum="0" 
+                    Maximum="1"
+                    Value="0.5"
+                    VerticalOptions="Center"/>
+        </Grid>
+
+        <Grid  Grid.Row="2" ColumnSpacing="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Column="0" Text="Mandelbrot" Clicked="Clear_Clicked"/>
+            <Button Grid.Column="1" Text="Render" Clicked="Render_Clicked"/>
+        </Grid>
+
+        <Grid  Grid.Row="3" ColumnSpacing="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <RadioButton Grid.Column="0" Content="Move" x:Name="MoveRadio"/>
+            <RadioButton Grid.Column="1" Content="Seed" x:Name="SeedRadio" IsChecked="True"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>

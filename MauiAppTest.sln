@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiAppTest", "MauiAppTest.csproj", "{28387350-6AEF-46B3-ABC2-F21319774D44}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "mcore", "..\..\cs\mcore\mcore.csproj", "{12D846DC-F7F6-4DFB-9950-99E1D6CB8AE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28387350-6AEF-46B3-ABC2-F21319774D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28387350-6AEF-46B3-ABC2-F21319774D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28387350-6AEF-46B3-ABC2-F21319774D44}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{28387350-6AEF-46B3-ABC2-F21319774D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28387350-6AEF-46B3-ABC2-F21319774D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28387350-6AEF-46B3-ABC2-F21319774D44}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{12D846DC-F7F6-4DFB-9950-99E1D6CB8AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D846DC-F7F6-4DFB-9950-99E1D6CB8AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D846DC-F7F6-4DFB-9950-99E1D6CB8AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D846DC-F7F6-4DFB-9950-99E1D6CB8AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9A2AA0E-47E7-46D7-A48F-66985B9E1F8E}
+	EndGlobalSection
+EndGlobal
